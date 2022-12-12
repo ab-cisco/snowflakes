@@ -1,0 +1,35 @@
+
+.snow {
+    position: absolute;
+    left: 0px;
+    top: 0px;
+    display: none;
+}
+
+.snowflake {
+    position: absolute;
+    user-select: none;
+    z-index: 1000;
+    pointer-events: none;
+
+    animation: falling_snowflakes 20s linear infinite;
+}
+
+.snowflake::before {
+    content: '';
+    display: inline-block;
+    background-color: #FFFFFF;
+    width: 5px;
+    height: 5px;
+    border-radius: 50%;
+}
+
+@keyframes falling_snowflakes {
+    from {
+      transform: translateY(0px);
+    }
+  
+    to {
+      transform: translateY(1000px);
+    }
+  }
